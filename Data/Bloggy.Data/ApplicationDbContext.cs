@@ -25,7 +25,11 @@ namespace Bloggy.Data
 
         public DbSet<Setting> Settings { get; set; }
 
-        public override int SaveChanges() 
+        public DbSet<Post> Posts { get; set; }
+
+        public DbSet<Category> Categories { get; set; }
+
+        public override int SaveChanges()
             => this.SaveChanges(true);
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)
@@ -35,7 +39,7 @@ namespace Bloggy.Data
             return base.SaveChanges(acceptAllChangesOnSuccess);
         }
 
-        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default) 
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
             => this.SaveChangesAsync(true, cancellationToken);
 
         public override Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default)

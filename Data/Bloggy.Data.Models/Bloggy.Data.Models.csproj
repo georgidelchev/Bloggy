@@ -22,5 +22,9 @@
   <ItemGroup>
     <ProjectReference Include="..\Bloggy.Data.Common\Bloggy.Data.Common.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Enumerations\" />
+  </ItemGroup>
   
 </Project>
