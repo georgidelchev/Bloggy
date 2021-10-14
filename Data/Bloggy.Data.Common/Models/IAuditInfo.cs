@@ -1,7 +1,7 @@
-﻿namespace Bloggy.Data.Common.Models
-{
-    using System;
+﻿using System;
 
+namespace Bloggy.Data.Common.Models
+{
     public interface IAuditInfo
     {
         DateTime CreatedOn { get; set; }

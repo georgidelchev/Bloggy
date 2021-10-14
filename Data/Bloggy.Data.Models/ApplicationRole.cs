@@ -1,12 +1,12 @@
 ﻿// ReSharper disable VirtualMemberCallInConstructor
+using System;
+
+using Bloggy.Data.Common.Models;
+
+using Microsoft.AspNetCore.Identity;
+
 namespace Bloggy.Data.Models
 {
-    using System;
-
-    using Bloggy.Data.Common.Models;
-
-    using Microsoft.AspNetCore.Identity;
-
     public class ApplicationRole : IdentityRole, IAuditInfo, IDeletableEntity
     {
         public ApplicationRole()

@@ -1,7 +1,7 @@
-﻿namespace Bloggy.Services.Mapping
-{
-    using AutoMapper;
+﻿using AutoMapper;
 
+namespace Bloggy.Services.Mapping
+{
     public interface IHaveCustomMappings
     {
         void CreateMappings(IProfileExpression configuration);

@@ -1,11 +1,11 @@
-﻿namespace Bloggy.Web.Controllers
+﻿using System.Diagnostics;
+
+using Bloggy.Web.ViewModels;
+
+using Microsoft.AspNetCore.Mvc;
+
+namespace Bloggy.Web.Controllers
 {
-    using System.Diagnostics;
-
-    using Bloggy.Web.ViewModels;
-
-    using Microsoft.AspNetCore.Mvc;
-
     public class HomeController : BaseController
     {
         public IActionResult Index()

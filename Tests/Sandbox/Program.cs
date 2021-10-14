@@ -1,26 +1,26 @@
-﻿namespace Sandbox
+﻿using System;
+using System.Diagnostics;
+using System.IO;
+using System.Threading.Tasks;
+
+using Bloggy.Data;
+using Bloggy.Data.Common;
+using Bloggy.Data.Common.Repositories;
+using Bloggy.Data.Models;
+using Bloggy.Data.Repositories;
+using Bloggy.Data.Seeding;
+using Bloggy.Services.Data;
+using Bloggy.Services.Messaging;
+
+using CommandLine;
+
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+
+namespace Sandbox
 {
-    using System;
-    using System.Diagnostics;
-    using System.IO;
-    using System.Threading.Tasks;
-
-    using Bloggy.Data;
-    using Bloggy.Data.Common;
-    using Bloggy.Data.Common.Repositories;
-    using Bloggy.Data.Models;
-    using Bloggy.Data.Repositories;
-    using Bloggy.Data.Seeding;
-    using Bloggy.Services.Data;
-    using Bloggy.Services.Messaging;
-
-    using CommandLine;
-
-    using Microsoft.EntityFrameworkCore;
-    using Microsoft.Extensions.Configuration;
-    using Microsoft.Extensions.DependencyInjection;
-    using Microsoft.Extensions.Logging;
-
     public static class Program
     {
         public static int Main(string[] args)

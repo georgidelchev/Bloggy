@@ -1,13 +1,13 @@
-﻿namespace Bloggy.Services.Mapping
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+
+using AutoMapper;
+using AutoMapper.Configuration;
+
+namespace Bloggy.Services.Mapping
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Reflection;
-
-    using AutoMapper;
-    using AutoMapper.Configuration;
-
     public static class AutoMapperConfig
     {
         private static bool initialized;
@@ -48,6 +48,7 @@
                         map.CreateMappings(configuration);
                     }
                 });
+
             MapperInstance = new Mapper(new MapperConfiguration(config));
         }
 

@@ -1,15 +1,15 @@
-﻿namespace Bloggy.Web.Controllers
+﻿using System;
+using System.Threading.Tasks;
+
+using Bloggy.Data.Common.Repositories;
+using Bloggy.Data.Models;
+using Bloggy.Services.Data;
+using Bloggy.Web.ViewModels.Settings;
+
+using Microsoft.AspNetCore.Mvc;
+
+namespace Bloggy.Web.Controllers
 {
-    using System;
-    using System.Threading.Tasks;
-
-    using Bloggy.Data.Common.Repositories;
-    using Bloggy.Data.Models;
-    using Bloggy.Services.Data;
-    using Bloggy.Web.ViewModels.Settings;
-
-    using Microsoft.AspNetCore.Mvc;
-
     public class SettingsController : BaseController
     {
         private readonly ISettingsService settingsService;

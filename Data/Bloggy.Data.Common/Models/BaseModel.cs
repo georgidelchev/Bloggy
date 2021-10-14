@@ -1,8 +1,8 @@
-﻿namespace Bloggy.Data.Common.Models
-{
-    using System;
-    using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
+namespace Bloggy.Data.Common.Models
+{
     public abstract class BaseModel<TKey> : IAuditInfo
     {
         [Key]

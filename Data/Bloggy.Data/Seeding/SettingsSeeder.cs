@@ -1,11 +1,11 @@
-﻿namespace Bloggy.Data.Seeding
+﻿using System;
+using System.Linq;
+using System.Threading.Tasks;
+
+using Bloggy.Data.Models;
+
+namespace Bloggy.Data.Seeding
 {
-    using System;
-    using System.Linq;
-    using System.Threading.Tasks;
-
-    using Bloggy.Data.Models;
-
     internal class SettingsSeeder : ISeeder
     {
         public async Task SeedAsync(ApplicationDbContext dbContext, IServiceProvider serviceProvider)
@@ -15,7 +15,8 @@
                 return;
             }
 
-            await dbContext.Settings.AddAsync(new Setting { Name = "Setting1", Value = "value1" });
+            await dbContext.Settings
+                .AddAsync(new Setting { Name = "Setting1", Value = "value1" });
         }
     }
 }

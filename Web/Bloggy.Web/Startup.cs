@@ -1,27 +1,27 @@
-﻿namespace Bloggy.Web
+﻿using System.Reflection;
+
+using Bloggy.Data;
+using Bloggy.Data.Common;
+using Bloggy.Data.Common.Repositories;
+using Bloggy.Data.Models;
+using Bloggy.Data.Repositories;
+using Bloggy.Data.Seeding;
+using Bloggy.Services.Data;
+using Bloggy.Services.Mapping;
+using Bloggy.Services.Messaging;
+using Bloggy.Web.ViewModels;
+
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+
+namespace Bloggy.Web
 {
-    using System.Reflection;
-
-    using Bloggy.Data;
-    using Bloggy.Data.Common;
-    using Bloggy.Data.Common.Repositories;
-    using Bloggy.Data.Models;
-    using Bloggy.Data.Repositories;
-    using Bloggy.Data.Seeding;
-    using Bloggy.Services.Data;
-    using Bloggy.Services.Mapping;
-    using Bloggy.Services.Messaging;
-    using Bloggy.Web.ViewModels;
-
-    using Microsoft.AspNetCore.Builder;
-    using Microsoft.AspNetCore.Hosting;
-    using Microsoft.AspNetCore.Http;
-    using Microsoft.AspNetCore.Mvc;
-    using Microsoft.EntityFrameworkCore;
-    using Microsoft.Extensions.Configuration;
-    using Microsoft.Extensions.DependencyInjection;
-    using Microsoft.Extensions.Hosting;
-
     public class Startup
     {
         private readonly IConfiguration configuration;

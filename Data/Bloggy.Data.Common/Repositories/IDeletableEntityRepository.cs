@@ -1,9 +1,9 @@
-﻿namespace Bloggy.Data.Common.Repositories
+﻿using System.Linq;
+
+using Bloggy.Data.Common.Models;
+
+namespace Bloggy.Data.Common.Repositories
 {
-    using System.Linq;
-
-    using Bloggy.Data.Common.Models;
-
     public interface IDeletableEntityRepository<TEntity> : IRepository<TEntity>
         where TEntity : class, IDeletableEntity
     {

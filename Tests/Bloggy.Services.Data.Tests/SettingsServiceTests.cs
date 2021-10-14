@@ -1,20 +1,20 @@
-﻿namespace Bloggy.Services.Data.Tests
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+using Bloggy.Data;
+using Bloggy.Data.Common.Repositories;
+using Bloggy.Data.Models;
+using Bloggy.Data.Repositories;
+
+using Microsoft.EntityFrameworkCore;
+
+using Moq;
+
+using Xunit;
+
+namespace Bloggy.Services.Data.Tests
 {
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
-
-    using Bloggy.Data;
-    using Bloggy.Data.Common.Repositories;
-    using Bloggy.Data.Models;
-    using Bloggy.Data.Repositories;
-
-    using Microsoft.EntityFrameworkCore;
-
-    using Moq;
-
-    using Xunit;
-
     public class SettingsServiceTests
     {
         [Fact]

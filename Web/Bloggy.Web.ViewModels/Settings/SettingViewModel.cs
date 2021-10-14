@@ -1,10 +1,10 @@
-﻿namespace Bloggy.Web.ViewModels.Settings
+﻿using Bloggy.Data.Models;
+using Bloggy.Services.Mapping;
+
+using AutoMapper;
+
+namespace Bloggy.Web.ViewModels.Settings
 {
-    using Bloggy.Data.Models;
-    using Bloggy.Services.Mapping;
-
-    using AutoMapper;
-
     public class SettingViewModel : IMapFrom<Setting>, IHaveCustomMappings
     {
         public int Id { get; set; }

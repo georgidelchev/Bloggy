@@ -1,7 +1,7 @@
-﻿namespace Bloggy.Services.Data
-{
-    using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
+namespace Bloggy.Services.Data
+{
     public interface ISettingsService
     {
         int GetCount();

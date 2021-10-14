@@ -1,7 +1,7 @@
-﻿namespace Bloggy.Web.Controllers
-{
-    using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
+namespace Bloggy.Web.Controllers
+{
     public class BaseController : Controller
     {
     }

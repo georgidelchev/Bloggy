@@ -1,8 +1,8 @@
-﻿namespace Bloggy.Web
-{
-    using Microsoft.AspNetCore.Hosting;
-    using Microsoft.Extensions.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
 
+namespace Bloggy.Web
+{
     public static class Program
     {
         public static void Main(string[] args)

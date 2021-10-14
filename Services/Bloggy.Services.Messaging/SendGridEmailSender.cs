@@ -1,13 +1,13 @@
-﻿namespace Bloggy.Services.Messaging
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+using SendGrid;
+using SendGrid.Helpers.Mail;
+
+namespace Bloggy.Services.Messaging
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
-
-    using SendGrid;
-    using SendGrid.Helpers.Mail;
-
     public class SendGridEmailSender : IEmailSender
     {
         private readonly SendGridClient client;
@@ -27,6 +27,7 @@
             var fromAddress = new EmailAddress(from, fromName);
             var toAddress = new EmailAddress(to);
             var message = MailHelper.CreateSingleEmail(fromAddress, toAddress, subject, null, htmlContent);
+
             if (attachments?.Any() == true)
             {
                 foreach (var attachment in attachments)
@@ -38,6 +39,7 @@
             try
             {
                 var response = await this.client.SendEmailAsync(message);
+
                 Console.WriteLine(response.StatusCode);
                 Console.WriteLine(await response.Body.ReadAsStringAsync());
             }
