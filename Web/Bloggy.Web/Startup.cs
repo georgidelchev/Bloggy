@@ -26,7 +26,8 @@ namespace Bloggy.Web
     {
         private readonly IConfiguration configuration;
 
-        public Startup(IConfiguration configuration)
+        public Startup(
+            IConfiguration configuration)
         {
             this.configuration = configuration;
         }
