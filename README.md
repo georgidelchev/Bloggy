@@ -1,2 +1,2 @@
 # Bloggy
-ASP.NET Core Web Blog app.
+ASP.NET Core Web Blog app. :)
